@@ -1,14 +1,17 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
     int main ( ) {
         std::string name;
+        srand(time(0));
         int choice;
 
         std::cout << "Eight reporting for duty!" << std::endl;
         std::cout << "─── ++ ─── ⚠︎ ─── ++ ───" << std::endl;                // Banner
         std::cout << "What is your name?" << std::endl;
-        std::cin >> name;                                                   // Store variable
+        std::cin >> name;                                                   // Variable
         std::cout << "Happy to assist you, " << name << "!" << std::endl;   // Response
         std::cout << "Eight: ONLINE" << std::endl;
         std::cout << "Standing by for your next command... and a banana." << std::endl;
@@ -16,7 +19,7 @@
 
         std::cout << "What would you like to do?" << std::endl;             // Menu
         std::cout << "1. Calculator" << std::endl;
-        std::cout << "2. Ask Eight" << std::endl;                           // 8Ball responses (yes, no, etc.)
+        std::cout << "2. Ask Eight" << std::endl;
         std::cout << "3. Sticky Note" << std::endl;
         std::cout << "4. Banana Break" << std::endl;
         std::cout << "5. Log off" << std::endl;
@@ -25,7 +28,7 @@
         double number1;
         double number2;
         double result;
-        if (choice ==1) {
+        if (choice ==1) {                                                 // Calculator
             std::cout << "Ready to solve your problem " << name << "!" << std::endl;
 
             std::cout << "Give me your first number: ";
@@ -36,6 +39,39 @@
             std::cout << "Your answer is: " << result <<std::endl;
         }
 
+        else if (choice == 2) {                                           // Ask Eight
+            std::string question;
+
+            std::cout << "Ask Eight your question: ";
+            std::cin.ignore();
+            std::getline(std::cin, question);
+
+            std::string responses[] = {                                   // 8Ball Oracle
+                "It is certain.",
+                "It is decidedly so.",
+                "Without a doubt.",
+                "Yes, definitely.",
+                "You may rely on it.",
+                "As I see it, yes.",
+                "Most likely.",
+                "Outlook is good.",
+                "Yes.",
+                "Signs point to yes.",
+                "Reply hazy, try again.",
+                "Ask again later.",
+                "Cannot predict now.",
+                "Concentrate and ask again.",
+                "Don't count on it.",
+                "My reply is no.",
+                "Outlook not so good.",
+                "Very doubtful."
+            };
+
+            int randomNumber = rand( ) % 18;
+            std::cout << "Eight says... " << responses[randomNumber] << std::endl;
+        }
+
+        // Sticky Note
 
         return 0;
     }
