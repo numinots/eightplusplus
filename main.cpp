@@ -71,7 +71,7 @@
             std::cout << "Eight says... " << responses[randomNumber] << std::endl;
         }
 
-        // Sticky Note
+        // Sticky Note for choice 3
 
         return 0;
     }
