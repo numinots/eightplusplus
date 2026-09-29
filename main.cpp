@@ -2,9 +2,11 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
     int main ( ) {
         std::string name;
+        std::vector<std::string> notes;
         srand(time(0));
         int choice;
 
@@ -71,7 +73,41 @@
             std::cout << "Eight says... " << responses[randomNumber] << std::endl;
         }
 
-        // Sticky Note for choice 3
+
+        else if (choice == 3) {
+            // Sticky Notes
+            std::cout << "Sticky Notes" << std::endl;
+            std::cout << "1. Leave a Note" << std:: endl;
+            std::cout << "2. View Notes" << std::endl;
+            std::cout << "3. Clear ALL" << std::endl;
+
+            int noteChoice;
+            std::cin >> noteChoice;
+
+            if (noteChoice == 1) {
+
+                std::string note;
+
+                std::cout << "Leave a sticky note!";
+                std::cin.ignore();
+                std::getline(std::cin, note);
+
+                notes.push_back(note);
+
+                std::cout << "\nNote saved!" << std::endl;
+                std::cout << note << std::endl;
+            }
+
+            else if (noteChoice == 2) {
+                std::cout <<"\nYour  Notes: " << std::endl;   // Storing notes
+
+                for (const std::string& note : notes) {
+                    std::cout << "- " << note << std::endl;
+                }
+            }
+        }
+
+
 
         return 0;
     }
