@@ -18,7 +18,6 @@
         std::cout << "Eight: ONLINE" << std::endl;
         std::cout << "Standing by for your next command... and a banana." << std::endl;
         std::cout << "─── ++ ─── ⚠︎ ─── ++ ───" << std::endl;                // Banner
-
         std::cout << "What would you like to do?" << std::endl;             // Menu
         std::cout << "1. Calculator" << std::endl;
         std::cout << "2. Ask Eight" << std::endl;
@@ -32,7 +31,6 @@
         double result;
         if (choice ==1) {                                                 // Calculator
             std::cout << "Ready to solve your problem " << name << "!" << std::endl;
-
             std::cout << "Give me your first number: ";
             std::cin >> number1;
             std::cout << "Give me your second number: ";
@@ -47,7 +45,6 @@
             std::cout << "Ask Eight your question: ";
             std::cin.ignore();
             std::getline(std::cin, question);
-
             std::string responses[] = {                                   // 8Ball Oracle
                 "It is certain.",
                 "It is decidedly so.",
@@ -73,9 +70,7 @@
             std::cout << "Eight says... " << responses[randomNumber] << std::endl;
         }
 
-
-        else if (choice == 3) {
-            // Sticky Notes
+        else if (choice == 3) {                                           // Sticky Notes
             std::cout << "Sticky Notes" << std::endl;
             std::cout << "1. Leave a Note" << std:: endl;
             std::cout << "2. View Notes" << std::endl;
@@ -105,10 +100,13 @@
                     std::cout << "- " << note << std::endl;
                 }
             }
+            else if (noteChoice == 3) {
+                notes.clear();
+                std::cout << "\nAll notes trashed!" << std::endl;
+            }
         }
 
 
 
         return 0;
     }
-// Created by Numi on 9/27/26.
