@@ -94,7 +94,7 @@
             }
 
             else if (noteChoice == 2) {
-                std::cout <<"\nYour  Notes: " << std::endl;   // Storing notes
+                std::cout <<"\nYour  Notes: " << std::endl;              // Storing notes
 
                 for (const std::string& note : notes) {
                     std::cout << "- " << note << std::endl;
