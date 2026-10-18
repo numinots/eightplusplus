@@ -126,14 +126,14 @@
                 std::cin >> std::boolalpha >> feedBanana;
 
                 if (feedBanana) {
-                    // Happy response
+                    // Happy responses
                     std::cout << "Eight is powering up!!!!" << std::endl;
                     std::cout << "*EIGHT HAPPY DANCES*" << std::endl;
                     std::cout << "Now I'm fueled up and ready for a new task!" << std::endl;
                     std::cout << "Eight will share banana with you ^ - ^" << std::endl;
                 }
                 else {
-                    // Sad Responses
+                    // Sad responses
                     std::cout << "NO NANA? BYE BYE!" << std::endl;
                     std::cout << "WHAT BUT NANA = HAPPY????? Eight: :((((" << std::endl;
                     std::cout << "..Oh ..yeah, we'll save that for later.. >.>" << std::endl;
