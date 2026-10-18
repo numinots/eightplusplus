@@ -136,7 +136,7 @@
                     // Sad Responses
                     std::cout << "NO NANA? BYE BYE!" << std::endl;
                     std::cout << "WHAT BUT NANA = HAPPY????? Eight: :((((" << std::endl;
-                    std::cout << "..oh ..yeah, we'll save that for later.. >.>" << std::endl;
+                    std::cout << "..Oh ..yeah, we'll save that for later.. >.>" << std::endl;
                     std::cout << "Back to work then buddy!" << std::endl;
                 }
             }
