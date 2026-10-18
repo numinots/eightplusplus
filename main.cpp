@@ -52,7 +52,8 @@
             std::cout << "Ask Eight your question: ";
             std::cin.ignore();
             std::getline(std::cin, question);
-            std::string responses[] = {                                 // 8Ball Oracle
+            std::string responses[] = {
+                // 8Ball Oracle
                 "It is certain.",
                 "It is decidedly so.",
                 "Without a doubt.",
