@@ -11,14 +11,19 @@
         int choice;
 
         std::cout << "Eight reporting for duty!" << std::endl;
-        std::cout << "─── ++ ─── ⚠︎ ─── ++ ───" << std::endl;                // Banner
+        std::cout << "─── ++ ─── ⚠︎ ─── ++ ───" << std::endl;
+        // Banner
         std::cout << "What is your name?" << std::endl;
-        std::cin >> name;                                                   // Variable
-        std::cout << "Happy to assist you, " << name << "!" << std::endl;   // Response
+        std::cin >> name;
+        // Variable
+        std::cout << "Happy to assist you, " << name << "!" << std::endl;
+        // Response
         std::cout << "Eight: ONLINE" << std::endl;
         std::cout << "Standing by for your next command... and a banana." << std::endl;
-        std::cout << "─── ++ ─── ⚠︎ ─── ++ ───" << std::endl;                // Banner
-        std::cout << "What would you like to do?" << std::endl;             // Menu
+        std::cout << "─── ++ ─── ⚠︎ ─── ++ ───" << std::endl;
+        // Banner
+        std::cout << "What would you like to do?" << std::endl;
+        // Menu
         std::cout << "1. Calculator" << std::endl;
         std::cout << "2. Ask Eight" << std::endl;
         std::cout << "3. Sticky Note" << std::endl;
@@ -29,7 +34,8 @@
         double number1;
         double number2;
         double result;
-        if (choice ==1) {                                                 // Calculator
+        if (choice ==1) {
+            // Calculator
             std::cout << "Ready to solve your problem " << name << "!" << std::endl;
             std::cout << "Give me your first number: ";
             std::cin >> number1;
@@ -39,13 +45,14 @@
             std::cout << "Your answer is: " << result <<std::endl;
         }
 
-        else if (choice == 2) {                                           // Ask Eight
+        else if (choice == 2) {
+             // Ask Eight
             std::string question;
 
             std::cout << "Ask Eight your question: ";
             std::cin.ignore();
             std::getline(std::cin, question);
-            std::string responses[] = {                                   // 8Ball Oracle
+            std::string responses[] = {                                 // 8Ball Oracle
                 "It is certain.",
                 "It is decidedly so.",
                 "Without a doubt.",
@@ -70,7 +77,8 @@
             std::cout << "Eight says... " << responses[randomNumber] << std::endl;
         }
 
-        else if (choice == 3) {                                           // Sticky Notes
+        else if (choice == 3) {
+             // Sticky Notes
             std::cout << "Sticky Notes" << std::endl;
             std::cout << "1. Leave a Note" << std:: endl;
             std::cout << "2. View Notes" << std::endl;
@@ -94,7 +102,8 @@
             }
 
             else if (noteChoice == 2) {
-                std::cout <<"\nYour  Notes: " << std::endl;              // Storing notes
+                std::cout <<"\nYour  Notes: " << std::endl;
+                // Storing notes
 
                 for (const std::string& note : notes) {
                     std::cout << "- " << note << std::endl;
@@ -106,6 +115,30 @@
             }
         }
 
+            else if (choice == 4) {
+                 // BANANA
+                bool feedBanana;
+
+                std::cout << "\nAre you sure you'd like to feed Eight a banana..." << std::endl;
+                std::cout << "true or false? ";
+
+                std::cin >> std::boolalpha >> feedBanana;
+
+                if (feedBanana) {
+                    // Happy response
+                    std::cout << "Eight is powering up!!!!" << std::endl;
+                    std::cout << "*EIGHT HAPPY DANCES*" << std::endl;
+                    std::cout << "Now I'm fueled up and ready for a new task!" << std::endl;
+                    std::cout << "Eight will share banana with you ^ - ^" << std::endl;
+                }
+                else {
+                    // Sad Responses
+                    std::cout << "NO NANA? BYE BYE!" << std::endl;
+                    std::cout << "WHAT BUT NANA = HAPPY????? Eight: :((((" << std::endl;
+                    std::cout << "..oh ..yeah, we'll save that for later.. >.>" << std::endl;
+                    std::cout << "Back to work then buddy!" << std::endl;
+                }
+            }
 
 
         return 0;
